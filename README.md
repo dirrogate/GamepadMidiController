@@ -1,3 +1,38 @@
+About This Forked Repo: This repository is a fork of romandykyi/GamepadMidiController.
+
+Purpose of this fork
+--------------------
+This project was forked and the compiled Windows executable included (Created via GithubDev AI GPT-5 mini) so that
+Musicians and Creative Artistes can easily download and use a prebuilt Windows
+EXE without needing to build the project locally. No other changes are intended
+to the original project's code or intent.
+
+Contents added in this fork
+--------------------------
+- A prebuilt Windows x86_64 executable: GamepadMidiController.exe
+- mappings.cfg.example
+
+License
+-------
+This fork preserves the original project's license. See the `LICENSE` file.
+## Simple Usage Instructions (Layman's Terms)
+
+- **What this program does:** It listens to your gamepad and sends MIDI messages to a MIDI output (like a virtual port). This lets you play synths or DAWs with your controller.
+- **Before you start:** Install a virtual MIDI port on Windows (for example, loopMIDI). Plug in your gamepad.
+- **Running the program:** Double-click the executable (GamepadMidiController.exe) or run it from a terminal. It will print available MIDI outputs — type the number of the port you want and press Enter.
+- **Basic controls:** Press buttons A/X/B/Y to play notes (default pitches provided). Pull triggers to send control-change (CC) messages for expression. Move the sticks to change chords or send CCs if you mapped them.
+- **How to change mappings without rebuilding:** Copy `mappings.cfg.example` to `mappings.cfg` beside the executable and edit it with your desired mappings. The program reads `mappings.cfg` on startup (see example syntax in the example file).
+
+## Example `mappings.cfg` (already included as `mappings.cfg.example`)
+See `mappings.cfg.example` for full commented examples. A quick example:
+
+button A note 1 60 100
+button B cc 1 21
+axis LEFT_STICK_X cc 2 10 -1.0 1.0
+
+Save your edits as `mappings.cfg` in the same folder as the executable and restart the program.
+
+Original Instructions Pre-fork is below:
 # GamepadToMidi
 
 GamepadToMidi lets you turn a standard game controller into a playable MIDI instrument. 
